@@ -523,4 +523,10 @@ public class OnmsFeatureKarafIT extends KarafTestCase {
 		installFeature("internal-plugins-descriptor");
 		System.out.println(executeCommand("feature:list -i"));
 	}
+
+    @Test
+    public void testInstallFeatureKafkaProducer() {
+        installFeature("kafka-streams");
+        installFeature("opennms-kafka-producer");
+    }
 }
